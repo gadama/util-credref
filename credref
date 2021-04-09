@@ -1,0 +1,8 @@
+#!/usr/bin/env perl6
+
+use v6;
+
+sub MAIN($ref) {
+    printf("RF%02d%s\n", 98 - ((S:g/(<alpha>)/{$0.lc.ord - 87}/ with $ref ~ "271500").Int % 97), $ref.uc);
+}
+
